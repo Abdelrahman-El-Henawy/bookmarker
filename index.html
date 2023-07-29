@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main class="py-5">
+        <div class="container">
+            <div class="row py-5">
+                <div class="py-2 header d-flex justify-content-center align-items-center">
+                    <h1 class=" mb-5 text-capitalize position-relative">bookmarker</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="header-2">
+                    <h2 class="text-center text-capitalize">
+                    <i class="fa-solid fa-bookmark"></i>
+                    bookmark your favourite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="main inputs">
+                        <div class="input-1 my-4">
+                            <label for="inputOne" class="my-2 text-capitalize ">
+                                <i class="fa-solid fa-book-bookmark mx-3"></i> site name
+                            </label>
+                            <input id="siteName" type="text" class="d-block w-100" required placeholder="Bookmark Name" onblur="changeSiteNameValidationColor()" onkeyup="changeSiteNameValidationColor()">
+                        </div>
+                        <div class="input-2 my-4">
+                            <label for="inputTwo" class="my-2">
+                                <i class="fa-solid fa-link mx-3"></i>Site URL</label>
+                            <input id="siteURL" type="text" class="d-block w-100" required placeholder="Website URL" onblur="changeSiteURLValidationColor()" onkeyup="changeSiteURLValidationColor()">
+                        </div>
+                        <div class="btn d-flex justify-content-center align-items-center">
+                            <button id="submitButton" onclick="showPopUpValidationBox()" class=" btn btn-warning rounded-3 px-5 py-2">Submit</button>
+                        </div>
+                        <!-- <div class="updates" id="updates">
+                            <div class="input-2 my-4">
+                                <label for="inputTwo" class="my-2">
+                                    <i class="fa-solid fa-link mx-3"></i>old Name</label>
+                                <input id="oldName" type="text" class="d-block w-100" required placeholder="old name" onblur="changeSiteURLValidationColor()" onkeyup="changeSiteURLValidationColor()">
+                            </div>
+                            <div class="input-1 my-4">
+                                <label for="inputOne" class="my-2 text-capitalize ">
+                                    <i class="fa-solid fa-book-bookmark mx-3"></i> new name
+                                </label>
+                                <input id="newName" type="text" class="d-block w-100" required placeholder="new Name" onblur="changeSiteNameValidationColor()" onkeyup="changeSiteNameValidationColor()">
+                            </div>
+                            <div class="btn d-flex justify-content-center align-items-center">
+                                <button id="updateButton" onclick="updateSiteName()" class=" btn btn-warning rounded-3 px-5 py-2">update</button>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+            <div class="warning d-none p-5 position-relative" id="showValdiation">
+                <div class="position-absolute">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <div class="inner-content">
+                    <h3 class="fs-6">Site Name or Url is not valid, Please follow the rules below :</h3>
+                    <ul class="my-3">
+                        <li class="py-2"><i class="fa-sharp fa-solid fa-arrow-right"></i>name must contain at least 3 characters</li>
+                        <li class="py-2"><i class="fa-sharp fa-solid fa-arrow-right"></i>Site URL must be a valid one</li>
+                    </ul>
+                </div>
+            </div>
+            <table class="outputs table my-5">
+                <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>website name</th>
+                        <th>visit</th>
+                        <th>delete</th>
+                        <th>update</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
